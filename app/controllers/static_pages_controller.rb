@@ -1,9 +1,4 @@
-class StaticPagesController < ActionController::API
+class StaticPagesController < ActionController::Base
   def index
-    thing = {
-      hello: 'hello'
-    }
-
-    render json: thing, status: :ok
   end
 end
