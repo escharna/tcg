@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
  end
 
  def index
+   render nothing: true
  end
 
  protected

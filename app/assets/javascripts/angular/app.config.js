@@ -18,6 +18,7 @@
   RunApp.$inject = ['$http'];
 
   function RunApp($http){
+    console.log('run app');
     var token = document.querySelector('meta[name=csrf-token]');
 
     $http.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

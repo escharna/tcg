@@ -3,6 +3,7 @@
 
   angular.module('application', [
     'ui.router',
-    'templates'
+    'templates',
+    'application.homeComponent'
   ]);
 })();
