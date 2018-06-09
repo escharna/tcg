@@ -8,7 +8,7 @@
 
     function ApplicationRouteConfig($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
       $urlMatcherFactoryProvider.strictMode(false);
-          console.log($stateProvider);
+
           $stateProvider.state('home', {
                   url: 'home/home',
                   views: {
@@ -22,5 +22,19 @@
                     }]
                   }
               });
+
+              $stateProvider.state('lobby', {
+                      url: 'lobby/lobby',
+                      views: {
+                        'main@': {
+                          component: 'lobbyComponent'
+                        }
+                      },
+                      resolve: {
+                        customForm: [function() {
+                          console.log('lobby');
+                        }]
+                      }
+                  });
     }
 }());

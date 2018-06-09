@@ -70,8 +70,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # *** Gems for Angular *** #
 
-gem 'jquery-rails'
-
 # Respond to ActiveRecord errors in JSON format
 gem 'responders'
 # Convert ruby database in JSON format

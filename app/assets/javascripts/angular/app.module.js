@@ -4,6 +4,7 @@
   angular.module('application', [
     'ui.router',
     'templates',
-    'application.homeComponent'
+    'application.homeComponent',
+    'application.lobbyComponent'
   ]);
 })();

@@ -1,6 +1,3 @@
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap/dist/js/bootstrap
 //= require angular
 //= require angular-ui-router
 //= require angular-rails-templates
@@ -8,3 +5,4 @@
 //= require angular/app.config.js
 //= require angular/app.routes.js
 //= require angular/home.component.js
+//= require_tree .
