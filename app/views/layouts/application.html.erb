@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="application">
 <head>
-  <title>RailsLove</title>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <title>TCG DEMO</title>
+  <!-- <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'application', media: 'all' %> -->
   <%= javascript_include_tag 'application' %>
 </head>
 <body>
-  <a ui-sref="home">Home</a>
-  <div ui-view="main"></div>
+  <%= yield %>
 </body>
 </html>
