@@ -79,3 +79,5 @@ gem 'bower-rails'
 # Allows to write HTML code within js assets folder
 # and compile HTML into assets pipeline
 gem 'angular-rails-templates'
+
+gem 'devise'
