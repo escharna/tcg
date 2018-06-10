@@ -5,6 +5,8 @@
     'ui.router',
     'templates',
     'application.homeComponent',
-    'application.lobbyComponent'
+    'application.lobbyComponent',
+    'application.usersComponent',
+    'application.usersFactory'
   ]);
 })();

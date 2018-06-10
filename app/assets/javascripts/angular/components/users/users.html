@@ -1,0 +1,18 @@
+<form ng-submit="$ctrl.submit()">
+  <label for="username">User Name</label>
+  <input ng-model="$ctrl.user.username"
+         name="username"
+         type="text"></input>
+
+  <label for="username">Email</label>
+  <input ng-model="$ctrl.user.email"
+         name="email"
+         type="text">
+  </input>
+
+  <button type="submit">Submit</button>
+</form>
+
+<ul>
+  <li ng-repeat="user in $ctrl.users">{{user.username}} - {{user.email}}</li>
+</ul>

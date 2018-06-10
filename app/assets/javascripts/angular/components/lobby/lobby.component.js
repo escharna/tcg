@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('application.lobbyComponent', []).component('lobbyComponent', {
-              templateUrl: 'angular/templates/lobby.html',
+              templateUrl: 'angular/components/lobby/lobby.html',
               controller: LobbyController,
               bindings: {
               }

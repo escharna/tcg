@@ -4,5 +4,5 @@
 //= require angular/app.module.js
 //= require angular/app.config.js
 //= require angular/app.routes.js
-//= require angular/home.component.js
-//= require_tree .
+//= require_tree ../javascripts/angular/factories
+//= require_tree ../javascripts/angular/components
