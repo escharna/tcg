@@ -10,8 +10,6 @@ class ApplicationController < ActionController::Base
  # def set_csrf_cookie
  #   cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
  # end
- protect_from_forgery prepend: true
- before_action :authenticate_user!
 
  def index
    render nothing: true
