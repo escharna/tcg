@@ -1,9 +1,10 @@
 {
   "name": "bower-rails generated vendor assests",
   "dependencies": {
-    "angular": "v1.5.8",
+    "angular": "v1.6.3",
     "angular-ui-router": "latest",
     "bootstrap": "~3.0.0",
-    "ng-token-auth": "^0.0.30"
+    "ng-token-auth": "^0.0.30",
+    "angular-resource": "1.6.3"
   }
 }
