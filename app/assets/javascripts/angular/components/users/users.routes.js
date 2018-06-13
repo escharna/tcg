@@ -10,7 +10,7 @@
     $urlMatcherFactoryProvider.strictMode(false);
 
     $stateProvider.state('usersNew', {
-      url: 'users/new',
+      url: '/users/new',
       views: {
         'main@': {
           component: 'usersComponent'

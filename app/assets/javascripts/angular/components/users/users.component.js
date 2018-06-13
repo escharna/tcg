@@ -5,14 +5,13 @@
               templateUrl: 'angular/components/users/users.html',
               controller: UsersController,
               bindings: {
-                users: '<'
               }
             }
           );
 
-    UsersController.$inject = ['$http', 'UsersFactory'];
+    UsersController.$inject = ['UsersFactory'];
 
-    function UsersController($http, UsersFactory) {
+    function UsersController(UsersFactory) {
       var vm = this;
 
       vm.$onInit = onInit;
@@ -20,11 +19,6 @@
 
       function onInit() {
         vm.user = {};
-        $http.get('/users/').then(function(response){
-          vm.users = response.data;
-        }, function(errors) {
-          return errors;
-        });
       }
 
       function submit() {
@@ -34,12 +28,18 @@
           email: vm.user.email
         }
 
-        $http.post('/users/', {
-          user: params
-        }).then(function(response){
-          vm.users.push(response.data);
-          vm.user = {};
-        }, function(){});
+        UsersFactory.save(params).$promise.then(function(data){
+          console.log('data', data);
+        });
+
+        vm.user = {};
+
+        // $http.post('/users/', {
+        //   user: params
+        // }).then(function(response){
+        //   vm.users.push(response.data);
+        //   vm.user = {};
+        // }, function(){});
 
         // UsersFactory.createUser(params);
       }
