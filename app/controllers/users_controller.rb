@@ -1,6 +1,4 @@
-class UsersController < ActionController::Base
-  skip_before_action :verify_authenticity_token
-
+class UsersController < ActionController::API
   def index
     @users = User.all
 

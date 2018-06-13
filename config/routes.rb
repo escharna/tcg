@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :static_pages
-  resources :users
+  mount_devise_token_auth_for 'User', at: 'auth'
 
-  get 'home/home', to: 'application#index'
-  get 'lobby/lobby', to: 'application#index'
-  get 'users/new', to: 'application#index'
+  scope '/api' do
+    resources :users, except: [:new, :edit]
+  end
 
-  root 'application#index'
+  get '/home', to: 'application#angular'
+  root to: 'application#angular'
+
+  # post 'auth/login', to: 'authentication#authenticate'
 end
