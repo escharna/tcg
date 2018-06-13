@@ -80,4 +80,5 @@ gem 'bower-rails'
 # and compile HTML into assets pipeline
 gem 'angular-rails-templates'
 
-gem 'devise'
+gem 'devise_token_auth'
+gem 'rack-cors'

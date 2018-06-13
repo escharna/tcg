@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {sessions: "sessions"}
+  mount_devise_token_auth_for 'User', at: 'auth'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :static_pages
-  resources :users
+  scope '/api' do
+    resources :users, except: [:new, :edit]
+  end
 
-  get 'home/home', to: 'application#index'
-  get 'lobby/lobby', to: 'application#index'
-  get 'users/new', to: 'application#index'
-
-  root 'application#index'
+  get '/*all', to: 'application#angular'
+  root to: 'application#angular'
 end

@@ -5,11 +5,10 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <base href="/"/>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
+  <div ui-view="main"></div>
   <%= yield %>
 </body>
 </html>
