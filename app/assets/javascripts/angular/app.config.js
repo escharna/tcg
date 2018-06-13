@@ -8,7 +8,11 @@
   ConfigApp.$inject = ['$locationProvider', '$resourceProvider'];
 
   function ConfigApp($locationProvider, $resourceProvider){
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+      enabled: true,
+      rewriteLinks: false
+    });
+
     $resourceProvider.defaults.stripTrailingSlashes = false;
   }
 

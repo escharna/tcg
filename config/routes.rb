@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :users, except: [:new, :edit]
   end
 
-  get '/home', to: 'application#angular'
+  get '/*all', to: 'application#angular'
   root to: 'application#angular'
 
   # post 'auth/login', to: 'authentication#authenticate'
