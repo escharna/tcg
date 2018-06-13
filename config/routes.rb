@@ -7,6 +7,4 @@ Rails.application.routes.draw do
 
   get '/*all', to: 'application#angular'
   root to: 'application#angular'
-
-  # post 'auth/login', to: 'authentication#authenticate'
 end
