@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   scope '/api' do
     resources :users, except: [:new, :edit]
+    get '/serve_image/:filename' => 'images#serve'
   end
 
   get '/*all', to: 'application#angular'
