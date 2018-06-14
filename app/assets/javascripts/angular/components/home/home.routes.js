@@ -19,7 +19,6 @@
         },
         resolve: {
           customForm: [function() {
-            console.log('hello');
           }]
         }
       });
