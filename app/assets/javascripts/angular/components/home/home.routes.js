@@ -11,7 +11,7 @@
       $urlMatcherFactoryProvider.strictMode(false);
 
       $stateProvider.state('home', {
-        url: '/home',
+        url: '/',
         views: {
           'main@': {
             component: 'homeComponent'
