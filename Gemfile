@@ -82,3 +82,4 @@ gem 'angular-rails-templates'
 
 gem 'devise_token_auth'
 gem 'rack-cors'
+gem 'sprockets', '~>3.7.2'
