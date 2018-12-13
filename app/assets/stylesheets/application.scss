@@ -6,10 +6,18 @@
 
 .card {
   transform: unset;
-  transition: transform ease 0.5s;
+  transition: all ease 0.5s;
+  height: 15%;
+  width: 15%;
+
+  &.hovering {
+    height: 20%;
+    width: 20%;
+    transition: all ease 0.2s;
+  }
 
   &.tapped {
     transform: rotate(90deg);
-    transition: transform ease 0.5s;
+    transition: all ease 0.5s;
   }
 }

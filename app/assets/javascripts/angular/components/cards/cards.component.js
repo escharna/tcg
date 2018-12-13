@@ -17,12 +17,15 @@
       vm.$onInit = onInit;
       vm.importCards = importCards;
       vm.tapCard = tapCard;
+      vm.hovering = hovering;
+      vm.notHovering = notHovering;
 
       function onInit() {
         console.log('cards');
         vm.cards = null;
         vm.cardSearchText = '';
         vm.tappedCards = [];
+        vm.hover = null;
       }
 
       function importCards() {
@@ -41,6 +44,16 @@
           vm.tappedCards.splice(vm.tappedCards.indexOf(card), 1);
         }
         console.log(vm.tappedCards.indexOf(card));
+      }
+
+      function hovering(card) {
+        console.log('i am hovering');
+        vm.hover = card;
+      }
+
+      function notHovering(card) {
+        vm.hover = null;
+        console.log('i am no longer hovering');
       }
     }
 }());

@@ -1,9 +1,10 @@
 <div ng-repeat="card in $ctrl.cards">
-  <img src="{{card.image_uris.small}}"
+  <img src="{{card.image_uris.normal}}"
        class="card"
-       ng-class="{'tapped': $ctrl.tappedCards.indexOf(card) === 0}"
+       ng-mouseover="$ctrl.hovering(card)"
+       ng-mouseleave="$ctrl.notHovering(card)"
+       ng-class="{'tapped': $ctrl.tappedCards.indexOf(card) === 0, 'hovering': $ctrl.hover === card}"
        ng-click="$ctrl.tapCard(card)">
-
   <br>
 
   <p ng-if="card.legalities.modern === 'legal'">
