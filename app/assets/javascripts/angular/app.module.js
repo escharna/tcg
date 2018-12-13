@@ -6,6 +6,8 @@
     'ui.router',
     'ngResource',
     'templates',
+    'application.cardsFactory',
+    'application.cardsComponent',
     'application.homeComponent',
     'application.lobbyComponent',
     'application.usersComponent',

@@ -1,0 +1,25 @@
+<img src="{{$ctrl.card.image_uris.small}}"
+     ng-if="$ctrl.card">
+
+<br>
+
+<p ng-if="$ctrl.card.legalities.modern === 'legal'">
+  This is legal in Modern!
+</p>
+
+<p ng-if="$ctrl.card.legalities.modern === 'not_legal'">
+  This is NOT legal in Modern!
+</p>
+
+<br>
+
+<label for="name">Card Name</label>
+<input type="text"
+       id="name"
+       ng-model="$ctrl.card.name">
+</input>
+
+<button type="button"
+        ng-click="$ctrl.importCards()">
+  Import Cards
+</button>
