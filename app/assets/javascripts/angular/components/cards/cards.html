@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div ng-repeat="card in $ctrl.cards">
   <img src="{{card.image_uris.normal}}">
 
@@ -14,14 +15,38 @@
     Import Card
   </button>
 </div>
+=======
+<img src="{{$ctrl.card.image_uris.small}}"
+     ng-if="$ctrl.card">
+
+<br>
+
+<p ng-if="$ctrl.card.legalities.modern === 'legal'">
+  This is legal in Modern!
+</p>
+
+<p ng-if="$ctrl.card.legalities.modern === 'not_legal'">
+  This is NOT legal in Modern!
+</p>
+
+<br>
+>>>>>>> c945430e28b3d3fa91661d104f86fd1c677d823b
 
 <label for="name">Card Name</label>
 <input type="text"
        id="name"
+<<<<<<< HEAD
        ng-model="$ctrl.cardSearchText">
+=======
+       ng-model="$ctrl.card.name">
+>>>>>>> c945430e28b3d3fa91661d104f86fd1c677d823b
 </input>
 
 <button type="button"
         ng-click="$ctrl.importCards()">
+<<<<<<< HEAD
   Search
+=======
+  Import Cards
+>>>>>>> c945430e28b3d3fa91661d104f86fd1c677d823b
 </button>
