@@ -1,5 +1,8 @@
 <div ng-repeat="card in $ctrl.cards">
-  <img src="{{card.image_uris.normal}}">
+  <img src="{{card.image_uris.small}}"
+       class="card"
+       ng-class="{'tapped': $ctrl.tappedCards.indexOf(card) === 0}"
+       ng-click="$ctrl.tapCard(card)">
 
   <br>
 
@@ -10,9 +13,6 @@
   <p ng-if="card.legalities.modern === 'not_legal'">
     This is NOT legal in Modern!
   </p>
-  <button type="button">
-    Import Card
-  </button>
 </div>
 
 <label for="name">Card Name</label>
@@ -22,6 +22,7 @@
 </input>
 
 <button type="button"
+        class="btn btn-primary"
         ng-click="$ctrl.importCards()">
   Search
 </button>

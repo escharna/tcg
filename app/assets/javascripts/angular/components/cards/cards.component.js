@@ -16,11 +16,13 @@
 
       vm.$onInit = onInit;
       vm.importCards = importCards;
+      vm.tapCard = tapCard;
 
       function onInit() {
         console.log('cards');
         vm.cards = null;
         vm.cardSearchText = '';
+        vm.tappedCards = [];
       }
 
       function importCards() {
@@ -30,6 +32,15 @@
           vm.cards = response.data;
           console.log('done', response.data);
         });
+      }
+
+      function tapCard(card) {
+        if (vm.tappedCards.indexOf(card) === -1) {
+          vm.tappedCards.push(card);
+        } else {
+          vm.tappedCards.splice(vm.tappedCards.indexOf(card), 1);
+        }
+        console.log(vm.tappedCards.indexOf(card));
       }
     }
 }());

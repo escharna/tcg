@@ -1,0 +1,15 @@
+/*
+ *= require bootstrap/dist/css/bootstrap
+ */
+
+
+
+.card {
+  transform: unset;
+  transition: transform ease 0.5s;
+
+  &.tapped {
+    transform: rotate(90deg);
+    transition: transform ease 0.5s;
+  }
+}
