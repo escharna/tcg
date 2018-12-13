@@ -1,0 +1,27 @@
+<div ng-repeat="card in $ctrl.cards">
+  <img src="{{card.image_uris.normal}}">
+
+  <br>
+
+  <p ng-if="card.legalities.modern === 'legal'">
+    This is legal in Modern!
+  </p>
+
+  <p ng-if="card.legalities.modern === 'not_legal'">
+    This is NOT legal in Modern!
+  </p>
+  <button type="button">
+    Import Card
+  </button>
+</div>
+
+<label for="name">Card Name</label>
+<input type="text"
+       id="name"
+       ng-model="$ctrl.cardSearchText">
+</input>
+
+<button type="button"
+        ng-click="$ctrl.importCards()">
+  Search
+</button>
